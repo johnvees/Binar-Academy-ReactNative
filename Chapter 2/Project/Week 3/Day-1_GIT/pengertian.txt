@@ -1,0 +1,2 @@
+GIT adalah suatu memori yang ditujukan untuk mengingat/mengelola proses2 yang sudah pernah dilakukan. Yang nantinya disimpan dalam sebuah repositori.
+Repositori merupakan suatu tempat atau gudang tempat menyimpan data atau memori tersebut
