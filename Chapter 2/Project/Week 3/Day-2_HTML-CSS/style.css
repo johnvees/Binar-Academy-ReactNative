@@ -1,0 +1,49 @@
+/* selector */
+
+/* tag html */
+/* akan menghighlight semua tag yang ada */
+h2 {
+  color: red;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 2px;
+}
+
+/* class name */
+.namaku {
+  color: black;
+  text-align: center;
+}
+
+/* id name */
+#ol_list {
+  list-style: circle;
+}
+
+/* Sizing */
+/* px, em, rem */
+/* margin and padding */
+.kotak {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background: greenyellow;
+  border: 1px solid black;
+  margin: 20px 40px 60px 80px;
+  padding-top: 24px;
+}
+
+.kotak1 {
+  width: 100px;
+  height: 100px;
+  background: aquamarine;
+}
+
+/* Layouting */
+/* float */
+
+/* grid */
+
+/* flexbox */
