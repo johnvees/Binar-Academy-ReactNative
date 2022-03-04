@@ -1,112 +1,98 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import {StyleSheet, Text, View, Image, StatusBar} from 'react-native';
 import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import OptionList from './src/component/OptionList';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import avatar from './src/assets/image/avatar-profile.png';
+import bannerCar from './src/assets/image/car-banner.png';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+const App = () => {
+  const callMyName = () => {
+    return 'Yohanes Velly Sabattino';
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={styles.containerCoba}>
+      <StatusBar backgroundColor="red" />
+      <OptionList />
+      <OptionList />
+      <OptionList />
+      <OptionList />
+    </View>
+    // <View style={styles.container}>
+    //   <View style={styles.content}>
+    //     <View style={styles.welcome}>
+    //       <View>
+    //         <Text style={styles.name}>Hi, {callMyName()}</Text>
+    //         <Text style={styles.location}>Surabaya</Text>
+    //       </View>
+    //       <Image source={avatar} style={styles.avatar} />
+    //     </View>
+    //     <View style={styles.banner}>
+    //       <Text style={styles.bannerText}>
+    //         Sewa Mobil Berkualitas di kawasanmu
+    //       </Text>
+    //       <Image source={bannerCar} style={styles.bannerCar} />
+    //     </View>
+    //   </View>
+    // </View>
   );
 };
 
+export default App;
+
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  containerCoba: {
+    height: 120,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'red',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  container: {
+    backgroundColor: '#FFF',
+    flex: 1,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  content: {
+    backgroundColor: '#D3D9FD',
+    height: '25%',
+    padding: 16,
   },
-  highlight: {
+  welcome: {
+    marginTop: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  avatar: {
+    width: 40,
+    height: 40,
+  },
+  name: {
+    fontSize: 16,
+    fontWeight: '300',
+    color: '#000',
+  },
+  location: {
+    marginTop: 4,
+    fontSize: 20,
+    color: '#000',
     fontWeight: '700',
   },
+  banner: {
+    marginTop: 20,
+    backgroundColor: '#091B6F',
+    borderRadius: 8,
+  },
+  bannerText: {
+    color: '#FFF',
+    fontSize: 20,
+    fontWeight: '400',
+    maxWidth: '50%',
+    marginTop: 24,
+    marginStart: 24,
+  },
+  bannerCar: {
+    width: 180,
+    height: 110,
+  },
 });
-
-export default App;
