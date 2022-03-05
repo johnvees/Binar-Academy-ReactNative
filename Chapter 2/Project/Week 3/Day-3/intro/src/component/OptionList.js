@@ -13,10 +13,11 @@ export default OptionList;
 
 const styles = StyleSheet.create({
   container: {
+    height: 60,
+    width: 60,
     backgroundColor: 'cyan',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 16,
     borderRadius: 10,
   },
 });

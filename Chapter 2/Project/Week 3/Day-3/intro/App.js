@@ -1,98 +1,107 @@
-import {StyleSheet, Text, View, Image, StatusBar} from 'react-native';
-import React from 'react';
-import OptionList from './src/component/OptionList';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView,
+  Image,
+} from 'react-native';
+import React, {useState} from 'react';
 
-import avatar from './src/assets/image/avatar-profile.png';
-import bannerCar from './src/assets/image/car-banner.png';
+import Berita from './src/component/Berita';
+import SomeScreen from './src/component/SomeScreen';
 
+import contohAvatar from './src/assets/image/avatar-profile.png';
+
+// state adalah data yang hanya bisa diakses oleh si component tersebut, terkecuali jika data tersebut dikirimkan via props
 const App = () => {
-  const callMyName = () => {
-    return 'Yohanes Velly Sabattino';
-  };
+  // todo
 
-  return (
-    <View style={styles.containerCoba}>
-      <StatusBar backgroundColor="red" />
-      <OptionList />
-      <OptionList />
-      <OptionList />
-      <OptionList />
-    </View>
-    // <View style={styles.container}>
-    //   <View style={styles.content}>
-    //     <View style={styles.welcome}>
-    //       <View>
-    //         <Text style={styles.name}>Hi, {callMyName()}</Text>
-    //         <Text style={styles.location}>Surabaya</Text>
-    //       </View>
-    //       <Image source={avatar} style={styles.avatar} />
-    //     </View>
-    //     <View style={styles.banner}>
-    //       <Text style={styles.bannerText}>
-    //         Sewa Mobil Berkualitas di kawasanmu
-    //       </Text>
-    //       <Image source={bannerCar} style={styles.bannerCar} />
-    //     </View>
-    //   </View>
-    // </View>
-  );
+  const [firstName, setFirstName] = useState('Yohanes');
+  const [age, setAge] = useState(21);
+
+  if (firstName === 'Yohanes') {
+    return (
+      <View>
+        <Text>ini render optional</Text>
+        <TouchableOpacity onPress={() => setFirstName('Yohanes aja')}>
+          <Text style={{fontSize: 40}}>Ganti nama yang atas</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  } else {
+    return (
+      <ScrollView>
+        <View>
+          <Text>
+            Hello my name is {firstName} dan saya berumur {age} tahun{' '}
+          </Text>
+
+          <TouchableOpacity onPress={() => setFirstName('Yohanes')}>
+            <Text style={{fontSize: 40}}>Ganti nama yang bawah</Text>
+          </TouchableOpacity>
+
+          <SomeScreen nama="Yohanes" firstName={firstName} />
+          <SomeScreen nama="Velly" />
+          <SomeScreen nama="Sabattino" />
+
+          <Image source={contohAvatar} />
+
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+          <Berita
+            hari="jumat"
+            tanggal="4/3/2022"
+            skala={5.1}
+            warning="tidak ber"
+            kejadian="gempa"
+          />
+        </View>
+      </ScrollView>
+    );
+  }
 };
 
 export default App;
 
-const styles = StyleSheet.create({
-  containerCoba: {
-    height: 120,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'red',
-  },
-  container: {
-    backgroundColor: '#FFF',
-    flex: 1,
-  },
-  content: {
-    backgroundColor: '#D3D9FD',
-    height: '25%',
-    padding: 16,
-  },
-  welcome: {
-    marginTop: 16,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  avatar: {
-    width: 40,
-    height: 40,
-  },
-  name: {
-    fontSize: 16,
-    fontWeight: '300',
-    color: '#000',
-  },
-  location: {
-    marginTop: 4,
-    fontSize: 20,
-    color: '#000',
-    fontWeight: '700',
-  },
-  banner: {
-    marginTop: 20,
-    backgroundColor: '#091B6F',
-    borderRadius: 8,
-  },
-  bannerText: {
-    color: '#FFF',
-    fontSize: 20,
-    fontWeight: '400',
-    maxWidth: '50%',
-    marginTop: 24,
-    marginStart: 24,
-  },
-  bannerCar: {
-    width: 180,
-    height: 110,
-  },
-});
+const styles = StyleSheet.create({});
