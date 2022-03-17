@@ -8,7 +8,6 @@ import {
 import React, {useState} from 'react';
 import axios from 'axios';
 import {BASE_URL} from '../../helpers/API';
-import { Input } from 'react-native-elements'
 
 const Login = ({navigation}) => {
   const [username, setUsername] = useState('');

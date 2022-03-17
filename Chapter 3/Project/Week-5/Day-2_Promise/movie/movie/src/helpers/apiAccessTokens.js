@@ -4,3 +4,5 @@ export const ACCESS_TOKEN =
 export const BaseUrl = 'https://api.themoviedb.org/3/';
 
 export const ImageUrl = 'https://image.tmdb.org/t/p/original/';
+
+export const BASE_URL = 'https://fakestoreapi.com';
