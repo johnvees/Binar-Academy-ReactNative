@@ -1,0 +1,36 @@
+
+  const getPopularMovieList = async () => {
+    try {
+      const results = await axios.get(`${BaseUrl}movie/top_rated`, {
+        headers: {Authorization: `Bearer ${ACCESS_TOKEN}`},
+      });
+
+      setListMovie(results.data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getTopRatedMovieList = async () => {
+    try {
+      const results = await axios.get(`${BaseUrl}movie/popular`, {
+        headers: {Authorization: `Bearer ${ACCESS_TOKEN}`},
+      });
+
+      setListMovie(results.data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getNowPlayingMovieList = async () => {
+    try {
+      const results = await axios.get(`${BaseUrl}movie/now_playing`, {
+        headers: {Authorization: `Bearer ${ACCESS_TOKEN}`},
+      });
+
+      setListMovie(results.data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  };
