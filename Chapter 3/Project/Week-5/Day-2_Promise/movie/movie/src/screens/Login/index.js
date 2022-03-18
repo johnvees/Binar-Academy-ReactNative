@@ -26,7 +26,7 @@ const Login = ({navigation}) => {
       console.log(results);
 
       if (results.status === 201 || results.status === 200)
-        navigation.dispatch(StackActions.replace('Home'));
+        navigation.replace('Home');
     } catch (error) {
       console.log(error);
       Alert.alert('Gagal', 'Username dan Password Tidak Ada');
