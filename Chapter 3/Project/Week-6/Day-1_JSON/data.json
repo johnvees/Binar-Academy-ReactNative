@@ -1,0 +1,6 @@
+{
+  "name": "Yohanes",
+  "age": 20,
+  "hobbies": ["tidur", "dll"],
+  "kriteria": { "height": "172cm" }
+}
