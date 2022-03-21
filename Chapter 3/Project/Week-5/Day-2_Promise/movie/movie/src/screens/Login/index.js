@@ -9,7 +9,6 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import axios from 'axios';
 import {BASE_URL} from '../../helpers/apiAccessTokens';
-import {StackActions} from '@react-navigation/native';
 
 const Login = ({navigation}) => {
   const [username, setUsername] = useState('');
