@@ -161,3 +161,55 @@ const changeCapital = (kalimat) => {
 
 console.log(changeCapital('hari ini hari selasa'));
 console.log(changeCapital('tes tes'));
+
+const data = {
+  status: 'Released',
+  tagline: 'Growing up is a beast.',
+  title: 'Turning Red',
+  video: false,
+  vote_average: 7.4,
+  vote_count: 871,
+  credits: {
+    cast: [
+      {
+        adult: false,
+        gender: 1,
+        id: 3156344,
+        known_for_department: 'Acting',
+        name: 'Rosalie Chiang',
+      },
+      {
+        adult: false,
+        gender: 1,
+        id: 3156344,
+        known_for_department: 'Acting',
+        name: 'Rosalie Chiang',
+      },
+      {
+        adult: false,
+        gender: 1,
+        id: 3156344,
+        known_for_department: 'Acting',
+        name: 'Rosalie Chiang',
+      },
+      {
+        adult: false,
+        gender: 1,
+        id: 3156344,
+        known_for_department: 'Acting',
+        name: 'Rosalie asdasd',
+      },
+    ],
+  },
+};
+
+const abcd = data.credits.cast;
+
+const cobaMap = abcd.map((isiArray, index) => {
+  return isiArray.name;
+});
+
+console.log(cobaMap);
+console.log(abcd);
+
+console.log(abcd[1].name);
