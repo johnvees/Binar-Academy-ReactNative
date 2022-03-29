@@ -1,0 +1,10 @@
+redux
+adalah tools untuk melakukan management state
+
+store
+adalah tempat penyimpanan yang lebih besar
+
+reducer
+adalah tempat penyimpanan yang lebih spesifik
+
+action
