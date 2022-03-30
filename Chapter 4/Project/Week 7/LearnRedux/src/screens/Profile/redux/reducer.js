@@ -8,5 +8,24 @@ const initialState = {
 };
 
 export const profileReducer = (state = initialState, action) => {
-  return state;
+  console.log(action, 'profile');
+
+  switch (action.type) {
+    case 'SET_NAMA':
+      return {
+        ...state,
+        name: action.nama,
+      };
+
+    case 'SET_AGE':
+      return {
+        ...state,
+        age: action.payload,
+      };
+
+    default:
+      return {
+        ...state,
+      };
+  }
 };
