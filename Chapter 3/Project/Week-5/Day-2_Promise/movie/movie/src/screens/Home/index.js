@@ -9,12 +9,15 @@ import {
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {ACCESS_TOKEN, BaseUrl, ImageUrl} from '../../helpers/apiAccessTokens';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {setMovie} from './redux/action';
 
 export default function App() {
   const [movies, setMovies] = useState([]);
+  const dispatch = useDispatch();
   const [categories, setCategories] = useState('now_playing');
   const listTopTab = useSelector(state => state.home.listTopTab);
+  const movie = useSelector(state => state.movie.now_playing);
 
   const getListMovieLatest = async () => {
     try {
@@ -22,7 +25,9 @@ export default function App() {
       const result = await axios.get(`${BaseUrl}movie/${categories}`, {
         headers: {Authorization: `Bearer ${ACCESS_TOKEN}`},
       });
-      setMovies(result.data.results);
+      // setMovies(result.data.results);
+      dispatch(setMovie(result.data.results));
+      console.log(result);
     } catch (error) {
       return <Text>Data Tidak Ada</Text>;
     }
@@ -30,6 +35,7 @@ export default function App() {
 
   useEffect(() => {
     getListMovieLatest();
+    // dispatch(setMovie());
   }, [categories]);
 
   const cardMovie = ({item}) => {
@@ -128,7 +134,7 @@ export default function App() {
         Sort By: {categories}
       </Text>
       <FlatList
-        data={movies}
+        data={movie}
         keyExtractor={(item, index) => index}
         renderItem={cardMovie}
       />
