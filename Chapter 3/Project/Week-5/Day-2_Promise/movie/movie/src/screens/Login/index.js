@@ -9,10 +9,15 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import axios from 'axios';
 import {BASE_URL} from '../../helpers/apiAccessTokens';
+import {useSelector} from 'react-redux';
 
 const Login = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const title = useSelector(state => state.login.title);
+  const titleDesc = useSelector(state => state.login.titleDesc);
+  const buttonText = useSelector(state => state.login.button);
 
   const postLogin = async () => {
     try {
@@ -44,8 +49,8 @@ const Login = ({navigation}) => {
         />
       </View>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>Welcome Back!</Text>
-        <Text style={styles.titleDesc}>Hey! You've been missed</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.titleDesc}>{titleDesc}</Text>
       </View>
       <View style={{flex: 1}}>
         <TextInput
@@ -60,7 +65,7 @@ const Login = ({navigation}) => {
           secureTextEntry={true}
         />
         <TouchableOpacity style={styles.button} onPress={postLogin}>
-          <Text style={styles.buttonText}>Sign In</Text>
+          <Text style={styles.buttonText}>{buttonText}</Text>
         </TouchableOpacity>
         <View
           style={{

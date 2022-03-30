@@ -9,10 +9,12 @@ import {
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {ACCESS_TOKEN, BaseUrl, ImageUrl} from '../../helpers/apiAccessTokens';
+import {useSelector} from 'react-redux';
 
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [categories, setCategories] = useState('now_playing');
+  const listTopTab = useSelector(state => state.home.listTopTab);
 
   const getListMovieLatest = async () => {
     try {
@@ -56,6 +58,18 @@ export default function App() {
     );
   };
 
+  const topTab = ({item}) => {
+    return (
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          setCategories(item);
+        }}>
+        <Text style={styles.text}>{item}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <View style={{backgroundColor: 'white'}}>
       <Text
@@ -68,7 +82,14 @@ export default function App() {
         }}>
         List Movie
       </Text>
-      <View
+      <FlatList
+        data={listTopTab}
+        keyExtractor={(item, index) => index}
+        renderItem={topTab}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      />
+      {/* <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
@@ -95,7 +116,7 @@ export default function App() {
           }}>
           <Text style={styles.text}>Now Playing</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
       <Text
         style={{
           marginBottom: 16,

@@ -16,6 +16,7 @@ import handsUp from '../../assets/illustration/handsUp.png';
 
 import axios from 'axios';
 import {BASE_URL} from '../../helpers/apiAccessTokens';
+import {useSelector} from 'react-redux';
 
 let regexPass = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');
 let regexEmail = new RegExp('^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$');
@@ -27,6 +28,10 @@ const Register = ({navigation}) => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastName] = useState('');
   const [phone, setPhone] = useState('');
+
+  const title = useSelector(state => state.register.title);
+  const titleDesc = useSelector(state => state.register.titleDesc);
+  const buttonText = useSelector(state => state.register.button);
 
   const postRegister = async () => {
     try {
@@ -91,15 +96,15 @@ const Register = ({navigation}) => {
         />
       </View>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>Hi! Nice To See You</Text>
-        <Text style={styles.titleDesc}>Register Your Account Below</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.titleDesc}>{titleDesc}</Text>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View
           style={{
             flex: 1,
             marginTop: moderateScale(16),
-            backgroundColor: 'white',
+            backgroundColor: '#FAFAFA',
           }}>
           <TextInput
             style={styles.textInput}
@@ -146,7 +151,7 @@ const Register = ({navigation}) => {
             }}
           />
           <TouchableOpacity style={styles.button} onPress={postRegister}>
-            <Text style={styles.buttonText}>Register</Text>
+            <Text style={styles.buttonText}>{buttonText}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
