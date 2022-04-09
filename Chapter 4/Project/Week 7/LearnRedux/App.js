@@ -5,18 +5,12 @@ import Profile from './src/screens/Profile';
 
 import {Provider} from 'react-redux';
 import {store} from './src/store';
+import {Root} from './src/routes';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <View flex={1}>
-        <View flex={1}>
-          <Home />
-        </View>
-        <View flex={1}>
-          <Profile />
-        </View>
-      </View>
+      <Root />
     </Provider>
   );
 };

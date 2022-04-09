@@ -1,16 +1,17 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useSelector} from 'react-redux';
+import axios from 'axios';
 
 const Home = () => {
-  const namaLengkap = useSelector(state => state.profile.name);
-  const age = useSelector(state => state.profile.age);
+
+  const getDataMovie = async () => {
+    const res = await axios.get
+  }
 
   return (
     <View>
       <Text>Home</Text>
-      <Text>{namaLengkap}</Text>
-      <Text>{age}</Text>
     </View>
   );
 };

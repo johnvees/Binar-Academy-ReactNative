@@ -13,7 +13,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {setMovie} from './redux/action';
 
 export default function App() {
-  const [movies, setMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
   const dispatch = useDispatch();
   const [categories, setCategories] = useState('now_playing');
   const listTopTab = useSelector(state => state.home.listTopTab);
@@ -21,7 +21,7 @@ export default function App() {
 
   const getListMovieLatest = async () => {
     try {
-      setMovies('');
+      // setMovies('');
       const result = await axios.get(`${BaseUrl}movie/${categories}`, {
         headers: {Authorization: `Bearer ${ACCESS_TOKEN}`},
       });
