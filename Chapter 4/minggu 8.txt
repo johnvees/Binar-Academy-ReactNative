@@ -1,0 +1,9 @@
+Hari Senin, 4 April 2022. Pada hari ini kami melanjutkan mengenai redux, redux selanjutnya yang kami manfaatkan adalah mengenai redux persist dimana redux persist mampu menyimpan state tersebut secara permanen didalam local aplikasi kita, dalam hal ini kami menerapkan redux persist ini pada login untuk menyimpan access token dari login tersebut.
+
+Hari Selasa, 5 April 2022. Untuk hari ini, dikarenakan seluruh materi mengenai chapter ini telah usai maka di hari ini kami diberikan kesempatan untuk melakukan tanya jawab baik mengenai tugas atau challenge maupun hal-hal diluar challenge, juga dapat bertanya jika terdapat kesusahan mengenai challenge yang dikerjakan.
+
+Hari Rabu, 6 April 2022. Mulai dari hari ini hingga akhir minggu ini merupakan hari untuk kami melakukan presentasi mengenai challenge yang telah kami kerjakan. Bagi yang telah melakukan presentasi maka kami dapat bertanya juga memberikan kritik dan saran bagi atau yang telah melakukan presentasi.
+
+Hari Kamis, 7 April 2022. Hari ini merupakan hari lanjutan kemarin dimana kami melakukan presentasi mengenai challenge yang telah kami kerjakan. Bagi yang telah melakukan presentasi maka kami dapat bertanya juga memberikan kritik dan saran bagi atau yang telah melakukan presentasi.
+
+Hari Jumat, 8 April 2022. Hari ini merupakan hari terakhir dimana kami melakukan presentasi mengenai challenge yang telah kami kerjakan. Bagi yang telah melakukan presentasi maka kami dapat bertanya juga memberikan kritik dan saran bagi atau yang telah melakukan presentasi.

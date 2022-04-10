@@ -1,0 +1,9 @@
+Hari Senin, 28 Maret 2022. Pada hari ini saya memasuki chapter yang baru, yang menurut saya merupakan chapter yang lumayan rumit dan sulit, yaitu mengenai penggunaan redux. Jadi di hari pembelajaran diawali dengan introduction atau pendahuluan dan pengenalan mengenai apa sih redux itu dan bagaimana cara kerjanya. Setelah itu kami mulai memasuki ke penggunaan redux pada salah satu projek terdahulu disini kami menerapkan komponen dari redux yaitu ada store dan reducer.
+
+Hari Selasa, 29 Maret 2022. Kemudian di hari yang kedua ini, kami melanjutkan pembelajaran mengenai redux, setelah sebelumnya kami mempelajari mengenai store dan reducer, di hari ini kami belajar mengenai komponen dari redux yang selanjutnya yaitu action, disini kami mempelajari bagaimana redux yang berperan sebegai state manajemen dapat menggantikan kegunaan dari use state.
+
+Hari Rabu, 30 Maret 2022. Setelah kami mempelajari konsep dan kegunaan dari komponen-komponen redux, maka di hari ini kami mencoba menerapkan redux tersebut sebagai state manajemen pada setiap komponen dan screens yang terdapat pada proyek terdahulu, disini kami mencoba menerapkan action dan reducer pada setiap komponen-komponen tersebut yang dapat menggantikan use state pada masing-masing komponen.
+
+Hari Kamis, 31 Maret 2022. Setelah beberapa hari yang lalu kami mempelajari mengenai konsep dasar bagaimana redux tersebut bekerja pada setiap masing komponen, maka pada hari ini kami mempelajari mengenai bagaimana redux tersebut bekerja secara global dengan menerapkan store, action, dan reducer. Kami mencoba menerapkan mengenai global loading dan refresh.
+
+Hari Jumat, 1 April 2022. Untuk hari ini kami mempelajari hal lanjutan mengenai redux, dimana pada hari ini kami belajar mengenai bagaimana cara membaca redux tersebut berjalan atau tidaknya dengan mudah. Disini kami mencoba menerapkan dan membiasakan untuk menggunakan bantuan dari redux logger.
