@@ -40,7 +40,7 @@ const App = () => {
     <Formik initialValues={{email: '', password: ''}} onSubmit={handleSubmit}>
       {({handleChange, handleBlur, handleReset, values}) => (
         <SafeAreaView>
-          <Text>Welcome to Test Formik Form</Text>
+          <Text>Welcome to Test Formiks Form</Text>
           <Input
             placeholder={'Username'}
             onChangeText={handleChange('email')}
